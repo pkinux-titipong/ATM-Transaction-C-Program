@@ -1,0 +1,68 @@
+DECLARE VARIABLES
+   CHOICE, PIN, ch AS int
+   Transaction AS char = 'y'; 
+   DEPOSIT, WITHDRAW AS unsiged long;
+
+MAIN:
+
+    LOOP1 CHECK IF PIN NOT TRUE:
+        PRINT " ENTER PIN " ;
+        IF NOT TRUE:
+            PRINT " VALID PIN "
+
+    LOOP2 DO:
+        PRINT " WELCOME TO ATM MACHINE " 
+        PRINT " CHOICE "
+        PRINT " CHOICE 1. CHECK BALANCE " 
+        PRINT " CHOICE 1. WITHDRAW "  
+        PRINT " CHOICE 1. DEPOSIT " 
+        PRINT " CHOICE 1. QUIT "
+        INPUT CHOICE;
+        SWITCH (CHOICE):
+            CASE 1 : 
+                PRINT " BALANCE " 
+                BREAK;
+            CASE 2 : 
+                PRINT " ENTER AMOUNT TO WITHDRAW " 
+                IF WITHDRAW % 100 != 0: 
+                   PRINT " PLEASE ENTER AMOUNT SUCH 100,500,1000 " 
+                ELSE IF WITHDRAW > AMOUNT: 
+                    PRINT " INSUFFICENT BALANCE " 
+                ELSE : 
+                    AMOUNT = AMOUNT - WITHDRAW;
+                    PRINT " PLEASE COLLECT CASH " 
+                    PRINT " YOUR CURRENT BALANCE IS AMOUNT " 
+                BREAK;
+            CASE 3 : 
+                PRINT " ENTER AMOUNT TO DEPOSIT " 
+                AMOUNT = AMOUNT + DEPOSIT;
+                PRINT " YOUR CURRENT BALANCE IS AMOUNT "  
+                BREAK;
+            CASE 4 : 
+                PRINT " THANK YOU TO USE OUR BANK "
+                BREAK;
+            DEFAULT : 
+                PRINT " INVALID CHOICE " 
+
+        PRINT " DO YOU WANT ANOTHER SERVICES? Y/N" 
+        IF DONT WANT n and N : 
+            ch = 1;
+    LOOP(!ch):
+        PRINT " THANK YOU FOR USE OUR BANK ";       
+        
+
+STRUCT : 
+    int User_ID;
+    int User_PIN;
+    unsiged long AMOUNT;
+: User1,User2;
+
+    // SET User Deatil
+    User1.User_ID = 1;
+    User1.User_PIN = 1122;
+    User1.AMOUNT = 20,000;
+
+    User2.User_ID = 2;
+    User2.User_PIN = 1235;
+    User2.AMOUNT = 50,0000;
+    // END SET Deatil
